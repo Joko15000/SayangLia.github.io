@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baca yaa Sayangku 💖</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Popup Pemilihan Lagu -->
+    <div id="music-popup">
+        <div class="popup-content">
+            <span class="music-icon">🎵</span> <!-- Ikon musik -->
+            <h2>Coba pilih salah satu lagu yang mungkin kamu suka ya Sayangku 💕</h2>
+            <button onclick="playMusic('lagu/lagu1.mp3')">Anugerah Terindah - Andmesh Kamaleng</button>
+            <button onclick="playMusic('lagu/lagu2.mp3')">Penjaga Hati - Nadhif Basalamah</button><br>
+            <button onclick="playMusic('lagu/lagu3.mp3')">Nanti Kita Seperti Ini - Batas Senja</button>
+            <button onclick="playMusic('lagu/lagu4.mp3')">Bercinta Lewat Kata - Donne Maula</button>
+        </div>
+    </div>
+
+    <!-- Konten Utama -->
+    <div id="content" style="display:none;">
+        <h1>Untuk Calon Istriku Ibu dari anak anakku 💖</h1>
+        <p id="gombalan"> Coba deh pencet ini yang dibawah</p>
+        <button id="gombalan-button" onclick="tampilkanGombalan()">Pencet Deh</button>
+        <div id="gombalan-container"></div>
+        <!-- Tombol WhatsApp (Awalnya disembunyikan) -->
+    <button id="whatsapp-button" onclick="kirimWhatsApp()">Ini tombol rahasia coba klik deh 💌</button>
+
+        <!-- Galeri Foto -->
+        <div id="gallery-container">
+            <h2>Kita💕</h2>
+            <div class="gallery">
+             
+                <img id="gallery-image" src="img/1.jpg" alt="Kenangan Bersama">
+              
+            </div>
+        </div>
+
+          <!-- Navbar (Tombol Sebelumnya & Berikutnya) -->
+    <div class="navbar-wrapper">
+        <button class="prev" onclick="prevImage()">❮ Sebelumnya</button>
+        <button class="next" onclick="nextImage()">Berikutnya ❯</button>
+    </div>
+
+        <!-- Tombol Interaktif -->
+        <div id="buttons-container">
+            <button onclick="hitungHari()">Coba Klik ini deh 💖</button>
+            <button onclick="tampilkanPesan1()">kalo ini? ✨</button>
+            <button onclick="tampilkanPesan2()">coba ini 🌹</button>
+            <button onclick="redirectToParent()">Ini jangan sampe kelewat ya 🔄</button></a>
+        </div>
+    </div>
+
+
+    <!-- Popup Custom -->
+    <div id="custom-popup" class="popup">
+    <div class="popup-content">
+        <p id="popup-text"></p>
+    </div>
+    </div>
+
+
+
+    <audio id="background-music" loop></audio>
+    <script src="script.js"></script>
+
+
+    
+</body>
+</html>

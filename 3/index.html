@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lia sayang❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Ubuntu', sans-serif;
+            background: linear-gradient(to right, #ffafbd, #ffc3a0);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(45deg, #ff6b6b, #ffd93d, #6c5ce7);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+        #bodyblur img {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(8px) brightness(0.7);
+            z-index: -1;
+        }
+        #Content {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s ease;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 30px;
+            max-width: 80%;
+            margin: 20px;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        #Content:hover {
+        transform: scale(1);
+    }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+        }
+
+        .image img {
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .image img:hover {
+            transform: scale(1.1);
+        }
+        #tlink {
+            color: #ff6b6b;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: color 0.3s;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            padding: 10px 20px;
+            border-radius: 25px;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            transform: translateY(0);
+            transition: all 0.3s ease;
+        }
+        #tlink:hover {
+            color: #ff3b3b;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+        }
+        .content2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .lovein {
+            font-size: 30px;
+            cursor: pointer;
+            animation: bounce 2s infinite;
+            font-size: 40px;
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        @keyframes heartbeat {
+        0% { transform: scale(1); }
+        14% { transform: scale(1.3); }
+        28% { transform: scale(1); }
+        42% { transform: scale(1.3); }
+        70% { transform: scale(1); }
+    }
+
+        p {
+          font-size: 16px;
+          line-height: 1.6;
+          color: #444;
+          margin: 10px 0;
+        }
+
+        blockquote {
+        border-left: 4px solid #ff6b6b;
+        padding-left: 20px;
+        margin: 20px 0;
+    }
+
+    .swal2-image {
+        border-radius: 50% !important;
+        object-fit: cover !important;
+        margin: 1em auto !important;
+        display: block !important;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+        border: 3px solid #fff !important;
+    }
+
+    .swal2-popup {
+        text-align: center !important;
+    }
+    </style>
+</head>
+<body>
+  <div id="bodyblur"><img src=jpg" width="100%" height="100%"/></div>
+  <!-- Isi Konten -->
+  <div id='Content'>
+    <div class="image">
+        <img src="img/3.jpg" width="220" height="250"/>
+    </div>
+     <!--<div id="sp1"></div>-->
+     <div>
+        <blockquote>
+           <p id="text"></p>
+           <p id="text2"></p>
+           <p onClick="popup();" id="tlink">[ Klik Ini Dong! ]</p>
+        </blockquote>
+     </div>
+  </div>
+  <div id="tombo" class="content2">
+     <div id="lope" class="ct1"><label class='lovein' onClick="showDiv();nonTo();">&#10084;&#65039;</label></div>
+     <p style="opacity:.7;font-size:12px;color:white">Sentuh LOVE di atas</p>
+  </div>
+  <script>
+     function nonTo() {document.getElementById('tombo').style.display = "none";} function showTo() {document.getElementById('tombo').style.display = "block";}
+     function nonFo() {document.getElementById('idfoto').style.display = "none";} function showFo() {document.getElementById('idfoto').style.display = "block";}
+     function nonDiv() {document.getElementById('Content').style.display = "none";} function showDiv() {ketik();document.getElementById('Content').style.opacity = "1";document.getElementById('Content').style.margin = "0";}
+     
+     var i=0,text;text = ""
+     var u=0,text2;text2 = ""
+     
+     function ketik() {if(i<text.length){document.getElementById("text").innerHTML += text.charAt(i);i++;setTimeout(ketik,100);}
+       if(i==text.length){document.getElementById("text").innerHTML = text + emotnama;ketikk();}
+     }
+     function ketikk() {if(u<text2.length){document.getElementById("text2").innerHTML += text2.charAt(u);u++;setTimeout(ketikk,200);}
+       if(u==text2.length){
+       document.getElementById('tlink').style.display = "block";
+       }
+     }
+  </script>
+  <script type="text/javascript">
+     function play() {//Link Audio Bisa Diganti
+     var audio = new Audio('msc/1.mp3');audio.play();}
+     
+                 const swals = Swal.mixin({allowOutsideClick: false, cancelButtonColor: '#FF0040',});
+                 const swalsy = Swal.mixin({confirmButtonText: 'Iya', allowOutsideClick: false,});
+                 const swalst = Swal.mixin({allowOutsideClick: false, showConfirmButton: false, timer: 3000, timerProgressBar: true,});
+                 
+                 async function mulaitanya(){
+                   var { isConfirmed: tanyawal } = await swals.fire({
+                     title: `Hai Lia Sayang❤️`,
+                     text: `Tolong jangan dipencet tombol dibawah ini`,
+                     imageUrl: 'img/1.jpg',
+                     imageWidth: '200',
+                     imageHeight: '250',
+                     imageAlt: 'Custom image',
+                     customClass: {
+                         image: 'swal2-image'
+                     },
+                     showClass: {
+                         popup: 'animate__animated animate__fadeIn'
+                     },
+                     confirmButtonText: 'Jangan dipencet',
+                     cancelButtonText: 'Langsung Aja',
+                     allowOutsideClick: false,
+                     showCancelButton: false
+                   });
+                   if(tanyawal){mulai();play();} else {nama = 'Kamu';kuis();play();}
+                 }
+                 async function mulai(){
+                  nama = 'Lia'; // Set name directly
+                  kuis();
+                  play();
+                  }
+                 async function kuis(){
+                           text = "Dear, " + nama + ".    ";
+                           emotnama = "&#10084;";
+                           text2 =  nama + " " + "Kamu tuh yang paling aku tunggu notifikasinya kalo hp aku bunyi, semangat ya ngulinya sayang❤️❤️❤️";
+                           pilihwarna();
+                  }
+                  mulaitanya();
+  </script>
+  <script>
+     maupilih = "Yee anaknya panji dibilangin batu amat hahaha orang gaboleh dipencet, untung sayang hehe 🙈";
+     maupilih2 = "yaudah deh udah terlanjur, terlanjur sayang banget juga sih❤️";
+     maupilih3 = "Pilih warna yang kamu suka ya sayang!";
+     warnaA = "❤️ Merah";
+     warnaB = "💙 Biru";
+     vyakin = "✨ Yakin";
+     vganti = "🔄 Ganti";
+     emotketawa = "&#128525;";
+     
+     teksatas = "Yeayy! 🎉";
+     teksatasoke = "Dibaca yaa ✨";
+     teksakhiroke = "Ada sesuatu nih buat kamu";
+     teksbawahA = "Wah pilih Merah nih... aku seneng warna merah juga warna merah, apalagi merahsakan kasih sayang dari liaa hahahaha. kamu tuh spesial kayak martabak ❤️";
+     teksbawahAA = "Bener nih pilih Merah Liaa? soalnya aku udah beneran sayang kamu hehe";
+     teksbawahAAA = "Atau mau coba warna yang lain? 🤔";
+     teksbawahB = "Wih pilih Biru... Tau ga? Biru itu dalam banget kayak rasaku ke kamu. kita usahain sampai kita ketemu titik foto dilatar biru ya sayanggg 💙";
+     teksbawahBB = "Sudah mantap nih pilih Biru? soalnya aku udah mantep juga milih kamu hehe";
+     teksbawahBBB = "Atau mau coba yang lain? 🤔";
+     
+     teksgantiA = "Oke, pindah ke Biru! emang agak labil yee anaknye Bapak Panji 💙";
+     teksgantiAA = "Sama aja cuma beda warna hahaha. lagian warna apapun juga gapapa kok, yang penting kamu tau kalau aku sayang banget sama kamu! 🥰" + emotketawa;
+     teksgantiB = "Oke, pindah ke Merah! emang agak labil yee anaknye Ibu Nur❤️";
+     teksgantiBB = "Ehehe, warna apapun yang kamu pilih tetep aja cuma kamu cuma Putri Aulia Az-zahra yang ada di hatiku! 💝" + emotketawa;
+     
+     gambar1 = "img/2.jpg";
+     gambar2 = "img/5.jpg";
+     gambar3 = "img/6.jpg";
+     
+     async function pilihwarna(){
+       var { isConfirmed: warna } = await swals.fire({
+         title: `<span style="font-size: 18px;">${nama} ${maupilih} ${maupilih2}, ${maupilih3}</span>`,
+         imageUrl: '' + gambar1,
+         imageWidth: 220,
+         imageHeight: 250,
+         showCancelButton: true,
+         confirmButtonText: `<span style="font-size: 12px;">${warnaA}</span>`,
+         cancelButtonText: `<span style="font-size: 12px;">${warnaB}</span>`,
+         background: 'rgba(255, 255, 255, 0.9)',
+         backdrop: `rgba(0,0,123,0.4)`,
+         confirmButtonColor: '#FA7575',
+         cancelButtonColor: '#2196F3'
+       });
+       if(warna){
+           await swals.fire({
+             title: '' + teksatas,
+             text: '' + teksbawahA,
+             imageUrl: '' + gambar2,
+             imageWidth: 220,
+             imageHeight: 250,
+             background: 'rgba(255, 255, 255, 0.9)',
+             confirmButtonColor: '#4CAF50'
+           });
+           var { isConfirmed: warna2 } = await swals.fire({
+           title: nama + ' ' + teksbawahAA,
+           text: '' + teksbawahAAA,
+           showCancelButton: true,
+           confirmButtonText: '' + vyakin,
+           cancelButtonText: '' + vganti,
+           background: 'rgba(255, 255, 255, 0.9)',
+           confirmButtonColor: '#4CAF50',
+           cancelButtonColor: '#2196F3'
+       });
+       if(warna2){
+           await swals.fire({
+             title: '' + teksatasoke,
+             text: '' + teksakhiroke,
+           });
+           showDiv();
+         } else {
+           await swals.fire({
+             title: '' + teksgantiA,
+             html: '' + teksgantiAA,
+             imageUrl: '' + gambar3,
+             imageWidth: 220,
+             imageHeight: 250,
+             background: 'rgba(255, 255, 255, 0.9)',
+             confirmButtonColor: '#4CAF50'
+           });
+           showDiv();
+       }
+       //Selingan
+         } else {
+           await swals.fire({
+             title: '' + teksatas,
+             text: '' + teksbawahB, 
+             imageUrl: '' + gambar2,
+             imageWidth: 120,
+             imageHeight: 120,
+             background: 'rgba(255, 255, 255, 0.9)',
+             confirmButtonColor: '#4CAF50'
+           });
+           var { isConfirmed: warna2 } = await swals.fire({
+           title: nama + ' ' + teksbawahBB, 
+           text: '' + teksbawahBBB,
+           showCancelButton: true,
+           confirmButtonText: '' + vganti,
+           cancelButtonText: '' + vyakin,
+           background: 'rgba(255, 255, 255, 0.9)',
+           confirmButtonColor: '#4CAF50',
+           cancelButtonColor: '#2196F3'
+       });
+       if(warna2){    
+           await swals.fire({
+             title: '' + teksgantiB,
+             html: '' + teksgantiBB,
+             imageUrl: '' + gambar3,
+             imageWidth: 120,
+             imageHeight: 120,
+             background: 'rgba(255, 255, 255, 0.9)',
+             confirmButtonColor: '#4CAF50'
+           });
+           showDiv();
+         } else {
+           await swals.fire({
+             title: '' + teksatasoke,
+             text: '' + teksakhiroke,
+           });
+           showDiv();
+       }
+       }
+       }
+       async function popup(){
+         await swals.fire({
+             title: 'Lia Sayang❤️',
+             text: 'Makasih ya udah mau jadi pasangan ari! Kamu akan terus jadi wanita yang ingin aku datangi dan aku jadiin tujuan. Terus bersama ari yaa apapun kondisinya💝. aku sayang kamu hari ini esok nanti dan selamanya. semoga yang disemogakan cepat kita wujudkan💝💝💝',
+             imageUrl: 'img/4.jpg',
+             imageWidth: 300,
+             imageHeight: 300,
+             background: 'rgba(255, 255, 255, 0.9)',
+             confirmButtonColor: '#FF69B4',
+             confirmButtonText: '❤️ Love you too!'
+         });
+       }
+  </script>
+</body>
+</html>
