@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #ff6b6b, #845ec2, #4b4453);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Floating bubble background effect */
+body::before,
+body::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    filter: blur(80px);
+    border-radius: 50%;
+    animation: float 8s infinite ease-in-out alternate;
+}
+
+body::after {
+    width: 350px;
+    height: 350px;
+    background: rgba(255, 255, 255, 0.15);
+    animation-duration: 10s;
+    animation-delay: 1s;
+}
+
+@keyframes float {
+    0% { transform: translate(-50px, -50px); }
+    100% { transform: translate(50px, 50px); }
+}
+
+.container {
+    text-align: center;
+}
+
+.zonk-text {
+    font-size: clamp(3rem, 10vw, 10rem);
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.9);
+    animation: bounce 2s infinite ease-in-out, glow 3s infinite linear;
+}
+
+/* Text bounce animation */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-25px); }
+}
+
+/* Glowing text animation */
+@keyframes glow {
+    0% { text-shadow: 0 0 10px rgba(255,255,255,0.7); }
+    50% { text-shadow: 0 0 30px rgba(255,255,255,1); }
+    100% { text-shadow: 0 0 10px rgba(255,255,255,0.7); }
+}
