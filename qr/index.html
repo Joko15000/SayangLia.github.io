@@ -3,21 +3,36 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gallery</title>
+    <title>Random Image Gallery</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
     <div class="container">
-        <h1>My Image Gallery</h1>
+        <h1>Random Image Gallery</h1>
 
-        <div class="gallery">
+        <div class="gallery" id="gallery">
             <img src="https://picsum.photos/id/1011/600/400" alt="Image 1">
             <img src="https://picsum.photos/id/1015/600/400" alt="Image 2">
             <img src="https://picsum.photos/id/1025/600/400" alt="Image 3">
             <img src="https://picsum.photos/id/1036/600/400" alt="Image 4">
+            <img src="https://picsum.photos/id/1043/600/400" alt="Image 5">
         </div>
     </div>
+
+    <script>
+        // Mengambil parent element
+        const gallery = document.getElementById("gallery");
+        // Mengambil semua gambar ke dalam array
+        const images = Array.from(gallery.children);
+
+        // Fisher-Yates Shuffle Algorithm
+        for (let i = images.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            gallery.appendChild(images[j]);
+            images.splice(j, 1);
+        }
+    </script>
 
 </body>
 </html>
